@@ -28,7 +28,7 @@
                     echo "$casella | ";
                 }
             } else {
-                echo "$valor";
+                echo $valor;
             }
             echo "<br>";
         }

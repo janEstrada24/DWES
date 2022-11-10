@@ -31,9 +31,7 @@
 		</optgroup>
 	</select><br /><br />  
    
-	<textarea name="mytextarea" id="" rows="3" cols="30">
-Text area
-	</textarea> <br /><br />
+	<textarea name="mytextarea" id="" rows="3" cols="30">Text area</textarea> <br /><br />
    
 	<button id="mysubmit" type="submit">Submit</button><br /><br />
 
