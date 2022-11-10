@@ -1,0 +1,10 @@
+create database acces_dades;
+create user u_acces_dades@localhost identified by "i";
+grant all privileges on acces_dades.* to u_acces_dades@localhost ;
+GRANT ALL PRIVILEGES ON gringottsdb.* TO 'dwes_user'@'%';
+use acces_dades;
+create table prova ( i int, a varchar(10) );
+insert into prova values ( 1,'a'), (2,'b');
+
+
+
