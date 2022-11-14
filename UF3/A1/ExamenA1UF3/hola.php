@@ -19,10 +19,32 @@
      * @return string
      */
     function obtenirNom():string {
-        $fitxerJSONUsuaris = "users.json";
-        $dadesUsuaris = llegeix($fitxerJSONUsuaris);
 
-        return $dadesUsuaris[obtenirCorreu()]['nom'];
+        try {
+            $hostname = "localhost";
+            $dbname = "dwes_janestrada_autpdo";
+            $username = "dwes_user";
+            $pw = "dwes_pass";
+            $pdo = new PDO ("mysql:host=$hostname;dbname=$dbname","$username","$pw");
+
+        } catch (PDOException $e) {
+            echo "Problemes per gestionar la base de dades: " . $e->getMessage() . "\n";
+            exit;
+        }
+
+        $nom = "";
+
+        $sql="select nom from usuaris where correu = ?";
+        $query = $pdo->prepare($sql);
+        $query->execute( array( obtenirCorreu() ) );
+        $fila = $query->fetch();
+
+        //eliminem els objectes per alliberar memòria 
+        unset($pdo); 
+        unset($query);
+
+        return $fila['nom'];
+
     }
 
 
@@ -44,50 +66,49 @@
      * @return string
      */
     function imprimirConnexions():string {
-        $resultat = "";
+        // Accedim a la base de dades
+        try {
+            $hostname = "localhost";
+            $dbname = "dwes_janestrada_autpdo";
+            $username = "dwes_user";
+            $pw = "dwes_pass";
+            $pdo = new PDO ("mysql:host=$hostname;dbname=$dbname","$username","$pw");
+
+        } catch (PDOException $e) {
+            echo "Problemes per gestionar la base de dades: " . $e->getMessage() . "\n";
+            exit;
+        }
 
         $correu = obtenirCorreu();
 
-        $fitxerJSONConnexions = "connexions.json";
-        $dadesConnexions = llegeix($fitxerJSONConnexions);
+        $sql="select ip, correu, dataAutentificacio, status from connexions where correu = ?";
+        $query = $pdo->prepare($sql);
+        $query->execute(array( $correu ));
 
-        /**
-         * Dins del bucle, agafem els accessos d'un usuari en concret
-         * i després mirem que sigui el missatge d'un accés correcte
-         */
-        for ($i = 0; $i < count($dadesConnexions); $i++) {
-            if ($dadesConnexions[$i]['user'] == $correu) {
-                if ($dadesConnexions[$i]['status'] == "signup_correcte"
-                || $dadesConnexions[$i]['status'] == "signin_correcte") {
-                    $resultat .= "Connexió des de " . $dadesConnexions[$i]['ip'] . " amb data " . $dadesConnexions[$i]['time'] . "<br>";
+        $e= $query->errorInfo();
+        if ($e[0]!='00000') {
+          echo "\nPDO::errorInfo():\n";
+          die("Error accedint a dades: " . $e[2]);
+        }  
+
+        $resultat = "";
+
+        foreach ( $query as $fila ) {
+            if ($fila['correu'] == $correu) {
+                if ($fila['status'] == "signup_correcte"
+                    || $fila['status'] == "signin_correcte") {
+                    $resultat .= "Connexió des de " . $fila['ip'] . " amb data " . $fila['dataAutentificacio'] . "<br>";
                 }
-            }
+            }            
         }
+
+        //eliminem els objectes per alliberar memòria 
+        unset($pdo); 
+        unset($query);
+        
         return $resultat;
     }
 
-    /**
-     * Llegeix les dades del fitxer. Si el document no existeix torna un array buit.
-     *
-     * @param string $file
-     * @return array
-     */
-    function llegeix(string $file) : array
-    {
-        // Obtenim el codi del fitxer
-        if (file_exists($file) && filesize($file) > 0) {
-            $var = json_decode(file_get_contents($file), true);
-        } 
-        /**
-         * En cas de que el fitxer estigui buit o no hi hagin registres
-         * (ho comprovem mitjancant la mida del fitxer), l'iniciarem 
-         * com a un array
-         */ 
-        elseif(file_exists($file) && filesize($file) == 0) {
-            $var = array();
-        }
-        return $var;
-    }
 ?>
 <!DOCTYPE html>
 <html lang="ca">
