@@ -1,0 +1,5 @@
+Enllaç del codi a Github:
+https://github.com/janEstrada24/DWES/tree/release/UF3/A3/concurs_Gossos
+
+Enllaç al fitxer sql amb l'estructura de la base de dades al Github:
+https://github.com/janEstrada24/DWES/tree/release/UF3/A3/scriptCreacioBaseDeDades
