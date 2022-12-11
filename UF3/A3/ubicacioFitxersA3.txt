@@ -3,3 +3,6 @@ https://github.com/janEstrada24/DWES/tree/release/UF3/A3/concurs_Gossos
 
 Enllaç al fitxer sql amb l'estructura de la base de dades al Github:
 https://github.com/janEstrada24/DWES/tree/release/UF3/A3/scriptCreacioBaseDeDades
+
+Enllaç públic:
+http://bosc.boscdelacoma.cat:8808/info.php
