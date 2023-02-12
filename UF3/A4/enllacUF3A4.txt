@@ -1,8 +1,10 @@
-Enllaç carpeta facelog:
+Enllaç GitHub carpeta facelog:
+https://github.com/janEstrada24/DWES/tree/release/UF3/A4/CarpetaPlugin
+https://github.com/janEstrada24/DWES/tree/release/UF3/A4/CarpetaPlugin/facelog
 
-
-Enllaç carpeta completa Wordpress:
-
+Enllaç GitHub carpeta completa Wordpress:
+https://github.com/janEstrada24/DWES/tree/release/UF3/A4/CarpetaWordpressCompleta
+https://github.com/janEstrada24/DWES/tree/release/UF3/A4/CarpetaWordpressCompleta/wordpress
 
 Enllaç públic:
 http://bosc.boscdelacoma.cat:8808/info.php
