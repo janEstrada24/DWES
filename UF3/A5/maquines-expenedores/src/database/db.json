@@ -1,0 +1,59 @@
+{
+  "maquines": [
+    {
+      "municipi": "Olot",
+      "adreca": "Carrer Madrid",
+      "id": "77fd7f5c-7a49-4401-a9fb-d2312915df34",
+      "createdAt": "2/22/2023, 11:02:42 AM",
+      "updatedAt": "2/22/2023, 11:02:42 AM"
+    },
+    {
+      "municipi": "Girona",
+      "adreca": "Carrer Barcelona",
+      "id": "14429c7c-f40c-49cc-a352-4e45ace160e7",
+      "createdAt": "2/22/2023, 11:18:17 AM",
+      "updatedAt": "2/22/2023, 11:18:17 AM"
+    }
+  ],
+  "productes": [
+    {
+      "nom": "Kinder Bueno",
+      "tipus": "dolços",
+      "preu": "1,20",
+      "categoria": "3",
+      "id": "ba7f71b0-f131-4987-8769-333379d3d358",
+      "createdAt": "2/22/2023, 9:43:10 AM",
+      "updatedAt": "2/23/2023, 2:48:04 PM"
+    },
+    {
+      "nom": "Patates Lays",
+      "tipus": "patates",
+      "preu": "1,75",
+      "categoria": "1",
+      "id": "de2568e0-1dbd-47e0-b492-45e478dc71d9",
+      "createdAt": "2/22/2023, 10:44:13 AM",
+      "updatedAt": "2/23/2023, 2:49:41 PM"
+    }
+  ],
+  "estocs": [
+    {
+      "producte": "de2568e0-1dbd-47e0-b492-45e478dc71d9",
+      "caducitat": "2/03/2023",
+      "dataVenda": "16/02/2023",
+      "ubicacio": "calaix1",
+      "id": "646867ae-a82f-446f-9d30-5fb376c9c7c7",
+      "createdAt": "2/23/2023, 2:57:29 PM",
+      "updatedAt": "2/23/2023, 3:00:29 PM"
+    },
+    {
+      "producte": "ba7f71b0-f131-4987-8769-333379d3d358",
+      "caducitat": "23/04/2023",
+      "dataVenda": "21/02/2023",
+      "ubicacio": "calaix12",
+      "id": "60f03649-c0ff-4ae1-9257-218f7859d692",
+      "createdAt": "2/23/2023, 3:02:03 PM",
+      "updatedAt": "2/23/2023, 3:02:03 PM"
+    }
+  ],
+  "categories": []
+}
