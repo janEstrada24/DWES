@@ -1,0 +1,15 @@
+Enllaç GitHub:
+https://github.com/janEstrada24/DWES/tree/release/UF4/A2/maquines-expenedores
+
+Enllaç Github fitxer JSON:
+https://github.com/janEstrada24/DWES/tree/release/UF4/A2/maquines-expenedores/src/database/db.json
+
+Enllaç index.js:
+http://bosc.boscdelacoma.cat:8808/MP07/UF4/A2/maquines-expenedores/src
+
+Enllaç fitxer JSON:
+http://bosc.boscdelacoma.cat:8808/MP07/UF4/A2/maquines-expenedores/src/database/db.json
+
+
+Enllaç públic:
+http://bosc.boscdelacoma.cat:8808/info.php

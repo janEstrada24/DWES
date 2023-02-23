@@ -9,3 +9,4 @@ http://bosc.boscdelacoma.cat:8808/info.php
 
 Enllaç index.php:
 http://bosc.boscdelacoma.cat:8808/MP07/UF3/A3/concurs_Gossos
+http://bosc.boscdelacoma.cat:8808/MP07/UF3/A3/concurs_Gossos/index.php
